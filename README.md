@@ -2,7 +2,7 @@
 
 A retro theme for Home Assistant with light and dark modes. The light mode looks like cream paper. The dark mode is night blue-grey with four colour stripes and a slight CRT effect.
 
-![Preview](images/preview.png)
+![Preview](images/preview.webp)
 
 ## Features
 
