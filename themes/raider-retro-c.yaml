@@ -1,0 +1,180 @@
+Raider Retro C:
+  # písmo: přidej https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap
+  # jako Stylesheet v Nastavení → Dashboardy → Zdroje (viz README)
+  primary-font-family: "'Barlow Condensed', sans-serif"
+  ha-font-family-body: "'Barlow Condensed', sans-serif"
+  paper-font-common-base_-_font-family: "'Barlow Condensed', sans-serif"
+
+  # tvar karet
+  ha-card-border-radius: "4px"
+  ha-card-border-width: "0"
+  ha-card-box-shadow: "none"
+
+  modes:
+    # ── SVĚTLÝ: krémový „papír“ jako web ─────────────────────────
+    light:
+      rr-crt: "0.35"   # síla CRT efektu v kartách (0 = vypnuto, 1 = plně)
+      rr-static-period: "14s"  # jak často přijde rušení (delší = méně často)
+      ha-ripple-color: "#D9822B"          # zvýraznění tlačítek při najetí
+      ha-ripple-hover-opacity: "0.14"
+      ha-ripple-pressed-opacity: "0.26"
+      primary-color: "#D9822B"
+      accent-color: "#C8432B"
+      primary-background-color: "#ECE2D0"
+      secondary-background-color: "#E3D7C1"
+      card-background-color: "#F5EEE1"
+      ha-card-background: "#F5EEE1"
+      primary-text-color: "#1E1C19"
+      secondary-text-color: "#5E574B"
+      disabled-text-color: "#A59C8C"
+      divider-color: "rgba(30,28,25,0.15)"
+      app-header-background-color: "#1E1C19"
+      app-header-text-color: "#ECE2D0"
+      sidebar-background-color: "#E3D7C1"
+      sidebar-icon-color: "#5E574B"
+      sidebar-selected-icon-color: "#C8432B"
+      sidebar-selected-text-color: "#C8432B"
+      state-icon-color: "#5E574B"
+      state-active-color: "#D9822B"
+      switch-checked-color: "#D9822B"
+      error-color: "#C8432B"
+      warning-color: "#D9822B"
+      success-color: "#5E8C5A"
+      info-color: "#2E7F8C"
+
+    # ── TMAVÝ: noční modrošedá, krémový text, pruhové akcenty ─────
+    dark:
+      rr-crt: "1"      # síla CRT efektu v kartách (0 = vypnuto, 1 = plně)
+      rr-static-period: "9s"   # jak často přijde rušení (delší = méně často)
+      ha-ripple-color: "#F7C531"          # zvýraznění tlačítek při najetí
+      ha-ripple-hover-opacity: "0.16"
+      ha-ripple-pressed-opacity: "0.30"
+      primary-color: "#F7C531"
+      accent-color: "#4FD8E0"
+      primary-background-color: "#16202C"
+      secondary-background-color: "#1B2634"
+      card-background-color: "rgba(14, 19, 28, 0.55)"
+      ha-card-background: "rgba(14, 19, 28, 0.55)"
+      # pozadí: pulzující záře pruhů je vložená přímo v motivu (HACS instaluje jen YAML).
+      # Volitelně nahraj do /config/www/ vlastní raider_stripes.svg (pruhy) nebo obrázek
+      # a přidej ho do seznamu níže, např. url('/local/raider_stripes.svg') left bottom / cover no-repeat fixed,
+      raider-pulse: "url(\"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1000 1000%22 preserveAspectRatio=%22xMinYMax slice%22%3E%3Cstyle%3E .p %7B opacity: 0; animation: pulse 12s ease-in-out infinite; %7D .p2 %7B animation-delay: .18s; %7D .p3 %7B animation-delay: .36s; %7D .p4 %7B animation-delay: .54s; %7D %40keyframes pulse %7B 0%25, 84%25, 100%25 %7B opacity: 0; %7D 88%25 %7B opacity: .95; %7D 92%25 %7B opacity: .25; %7D 94%25 %7B opacity: .6; %7D 97%25 %7B opacity: 0; %7D %7D %40media (prefers-reduced-motion: reduce) %7B .p %7B animation: none; %7D %7D %3C/style%3E%3Cdefs%3E%3Cfilter id=%22g%22 x=%22-30%25%22 y=%22-30%25%22 width=%22160%25%22 height=%22160%25%22%3E%3CfeGaussianBlur stdDeviation=%2218%22/%3E%3C/filter%3E%3C/defs%3E%3Cg fill=%22none%22 stroke-width=%2222%22 filter=%22url(%23g)%22%3E%3Cpath class=%22p p1%22 d=%22M -20 300 L 340 1030%22 stroke=%22%23FF1E1E%22/%3E%3Cpath class=%22p p2%22 d=%22M -20 345 L 318 1030%22 stroke=%22%23FFC21A%22/%3E%3Cpath class=%22p p3%22 d=%22M -20 390 L 296 1030%22 stroke=%22%2322D36B%22/%3E%3Cpath class=%22p p4%22 d=%22M -20 435 L 110 700 C 150 782 170 860 170 940 L 170 1030%22 stroke=%22%234FD8E0%22/%3E%3C/g%3E%3Cg fill=%22none%22 stroke-width=%2210%22 stroke=%22%23FFFFFF%22 style=%22mix-blend-mode:screen%22%3E%3Cpath class=%22p p1%22 d=%22M -20 300 L 340 1030%22 stroke-opacity=%22.35%22/%3E%3Cpath class=%22p p2%22 d=%22M -20 345 L 318 1030%22 stroke-opacity=%22.35%22/%3E%3Cpath class=%22p p3%22 d=%22M -20 390 L 296 1030%22 stroke-opacity=%22.35%22/%3E%3Cpath class=%22p p4%22 d=%22M -20 435 L 110 700 C 150 782 170 860 170 940 L 170 1030%22 stroke-opacity=%22.35%22/%3E%3C/g%3E%3C/svg%3E\")"
+      lovelace-background: "var(--raider-pulse) left bottom / cover no-repeat fixed, radial-gradient(ellipse at 30% 20%, #26364A, #121A24 70%) fixed"
+      primary-text-color: "#F2ECE0"
+      secondary-text-color: "#9AA3AE"
+      disabled-text-color: "#4A525C"
+      divider-color: "rgba(242,236,224,0.10)"
+      app-header-background-color: "#121A24"
+      app-header-text-color: "#F2ECE0"
+      sidebar-background-color: "#0F161F"
+      sidebar-icon-color: "#9AA3AE"
+      sidebar-selected-icon-color: "#F7C531"
+      sidebar-selected-text-color: "#F7C531"
+      state-icon-color: "#9AA3AE"
+      state-active-color: "#F5A623"
+      switch-checked-color: "#F5A623"
+      error-color: "#FF1E1E"
+      warning-color: "#F7C531"
+      success-color: "#22D36B"
+      info-color: "#4FD8E0"
+
+  # MOTIV C: písmo je čisté, ale při občasném rušení zrno krátce přeskočí i přes text
+  # barevný pruh nahoře na kartách + nadpisy verzálkami (vyžaduje card-mod z HACS)
+  card-mod-theme: "Raider Retro C"
+  card-mod-card: |
+    {#- náhodný pruh: každá karta má jiné pořadí barev a jiné šířky úseků -#}
+    {%- set rr_c = ['#FF1E1E', '#FFC21A', '#22D36B', '#4FD8E0'] -%}
+    {%- set rr_p = [[0,1,2,3],[0,1,3,2],[0,2,1,3],[0,2,3,1],[0,3,1,2],[0,3,2,1],[1,0,2,3],[1,0,3,2],[1,2,0,3],[1,2,3,0],[1,3,0,2],[1,3,2,0],[2,0,1,3],[2,0,3,1],[2,1,0,3],[2,1,3,0],[2,3,0,1],[2,3,1,0],[3,0,1,2],[3,0,2,1],[3,1,0,2],[3,1,2,0],[3,2,0,1],[3,2,1,0]] | random -%}
+    {%- set rr_w = [range(10, 41) | random, range(10, 41) | random, range(10, 41) | random, range(10, 41) | random] -%}
+    {%- set rr_t = rr_w | sum -%}
+    {%- set rr_s1 = (rr_w[0] * 100 / rr_t) | round(1) -%}
+    {%- set rr_s2 = ((rr_w[0] + rr_w[1]) * 100 / rr_t) | round(1) -%}
+    {%- set rr_s3 = ((rr_w[0] + rr_w[1] + rr_w[2]) * 100 / rr_t) | round(1) -%}
+    {%- set rr_g = rr_c[rr_p[0]] ~ ' 0 ' ~ rr_s1 ~ '%, ' ~ rr_c[rr_p[1]] ~ ' ' ~ rr_s1 ~ '% ' ~ rr_s2 ~ '%, ' ~ rr_c[rr_p[2]] ~ ' ' ~ rr_s2 ~ '% ' ~ rr_s3 ~ '%, ' ~ rr_c[rr_p[3]] ~ ' ' ~ rr_s3 ~ '% 100%' -%}
+    ha-card {
+      position: relative;
+      border-top: 4px solid transparent;
+      border-image: linear-gradient(90deg, {{ rr_g }}) 1;
+      backdrop-filter: blur(10px);
+      box-shadow: inset 0 0 40px rgba(0,0,0, calc(0.35 * var(--rr-crt, 1)));
+      isolation: isolate;   /* efekty se kreslí POD obsah karty */
+    }
+    /* záře barevného pruhu nahoře */
+    ha-card::before {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; top: -4px; height: 4px;
+      background: linear-gradient(90deg, {{ rr_g }});
+      filter: blur(7px);
+      opacity: calc(0.9 * var(--rr-crt, 1));
+      pointer-events: none;
+    }
+    /* řádkování + zrnění na ploše karty (pod textem) */
+    ha-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;          /* řádkování a zrno jen na ploše karty, text zůstává čistý */
+      pointer-events: none;
+      opacity: var(--rr-crt, 1);
+      background:
+        repeating-linear-gradient(0deg,
+          rgba(0,0,0,0.22) 0 1px, transparent 1px 3px),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.7 -0.25'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+      /* občasný „záchvat“ zrnění – většinu času klid, pak krátké rušení */
+      animation: rr-static var(--rr-static-period, 9s) steps(1) infinite;
+      /* náhodné načasování – každá karta zazrní jindy (šablona card-mod;
+         kdyby nefungovala, efekt jen poběží ve všech kartách naráz) */
+      animation-duration: calc(var(--rr-static-period, 9s) + {{ range(0, 60) | random / 10 }}s);
+      animation-delay: -{{ range(0, 150) | random / 10 }}s;
+    }
+    @keyframes rr-static {
+      0%, 92%, 100% { background-position: 0 0, 0 0;        filter: none; z-index: -1; }
+      93%           { background-position: 0 1px, 37px -21px; filter: brightness(1.8) contrast(1.4); z-index: 1; }
+      94%           { background-position: 0 2px, -52px 44px; filter: brightness(2.2) contrast(1.6); z-index: 1; }
+      95%           { background-position: 0 0, 18px 73px;    filter: brightness(1.6) contrast(1.3); z-index: 1; }
+      96%           { background-position: 0 1px, -81px -12px; filter: brightness(2.4) contrast(1.7); z-index: 1; }
+      97%           { background-position: 0 2px, 63px 29px;  filter: brightness(1.7) contrast(1.4); z-index: 1; }
+      98%           { background-position: 0 0, -27px -66px;  filter: brightness(1.3) contrast(1.2); z-index: 1; }
+    }
+    /* zvýraznění karty při najetí myší (jen zařízení s myší) */
+    ha-card {
+      transition: background-color .15s ease, box-shadow .15s ease, transform .15s ease;
+    }
+    @media (hover: hover) {
+      ha-card:hover {
+        background-color: rgba(30, 41, 58, 0.70);
+        transform: translateY(-1px);
+        box-shadow:
+          inset 0 0 40px rgba(0,0,0, 0.25),
+          0 0 0 1px rgba(247,197,49, 0.45),
+          0 0 18px rgba(247,197,49, 0.18);
+      }
+      ha-card:hover::before {
+        height: 6px;
+        filter: blur(10px);
+        opacity: 1;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      ha-card::after { animation: none; }
+    }
+    /* přehrávače bez obrázku: místo plné žluté jen jemný nádech barvy */
+    .background:not(.off) .color-block,
+    .background:not(.off) .no-img {
+      background-color: color-mix(in srgb, var(--primary-color) 18%, transparent);
+    }
+    .player.no-image { color: var(--primary-text-color); }
+    /* vypnuté a nedostupné: žádná šedá plocha, jen průhledná karta */
+    .background.off { filter: none; }
+    .background.off .color-block,
+    .background.off .no-img {
+      background-color: rgba(127,127,127,0.06);
+    }
+    .background.off .no-img { opacity: 0; }
+    .player.off { color: var(--secondary-text-color); }
+    .background.unavailable ~ .player { opacity: .55; }
+    .card-header, .name {
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
