@@ -22,7 +22,7 @@ A retro theme for Home Assistant with light and dark modes. The light mode looks
 
 ### HACS
 
-1. Go to **HACS → ⋮ → Custom repositories**, enter `https://github.com/<github-user>/<repository>` and pick the **Theme** category.
+1. Go to **HACS → ⋮ → Custom repositories**, enter `https://github.com/Prznitel/hacs-raider-retro` and pick the **Theme** category.
 2. Search for **Raider Retro C** and install it.
 3. Make sure `configuration.yaml` loads themes:
 
