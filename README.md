@@ -61,6 +61,10 @@ Each mode has two variables near the top that you can change:
 
 You can also put your own picture under the stripes. Upload it to `/config/www/`, then add `url('/local/your-image.jpg') center / cover no-repeat fixed` to `lovelace-background` in the dark mode.
 
+## Made with AI
+
+This theme was created with the help of [Claude](https://claude.ai), an AI assistant by Anthropic.
+
 ## License
 
 [MIT](LICENSE)
@@ -72,3 +76,5 @@ You can also put your own picture under the stripes. Upload it to `/config/www/`
 Retro motiv pro Home Assistant se světlým a tmavým režimem. Každá karta má nahoře barevný pruh v náhodném pořadí a s náhodnými šířkami. Tmavý režim má navíc jemný CRT efekt a občas zapulzuje pozadí.
 
 Potřebuje [card-mod](https://github.com/thomasloven/lovelace-card-mod) a písmo Barlow Condensed přidané jako zdroj dashboardů (postup je v části **Font** výše). Instalace přes HACS: **Vlastní repozitáře → kategorie Motiv**.
+
+Motiv vznikl s pomocí AI asistenta [Claude](https://claude.ai) od společnosti Anthropic.
